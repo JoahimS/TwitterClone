@@ -1,0 +1,56 @@
+
+<h1 style = "max-width: 1000px; margin: auto;">Register</h1>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <h5 *ngIf="success">Your form is valid!</h5>
+
+    <label>
+      Username:
+      <input type="text" formControlName="username">
+      <div *ngIf="submitted && registerForm.controls.username.errors" class="error">
+        <div *ngIf="registerForm.controls.username.errors.required">Username is required</div>
+      </div>
+    </label>
+  
+    <label>
+      Password:
+      <input type="text" formControlName="password">
+      <div *ngIf="submitted && registerForm.controls.password.errors" class="error">
+        <div *ngIf="registerForm.controls.password.errors.required">Password is required</div>
+      </div>
+    </label>
+
+    <label>
+      Email:
+      <input type="text" formControlName="email">
+      <div *ngIf="submitted && registerForm.controls.email.errors" class="error">
+        <div *ngIf="registerForm.controls.email.errors.required">Email is required</div>
+      </div>
+    </label>
+
+    <label>
+      Biography:
+      <input type="text" formControlName="biography">
+      <div *ngIf="submitted && registerForm.controls.biography.errors" class="error">
+        <div *ngIf="registerForm.controls.biography.errors.required">Biography is required</div>
+      </div>
+    </label>
+
+    <input type="submit" value="Register" class="cta">
+  
+  </form>
+
+  <div *ngIf="submitted" class="results">
+    <strong>Username:</strong> 
+    <span>{{ registerForm.controls.username.value }}</span>
+
+    <strong>Password:</strong> 
+    <span>{{ registerForm.controls.password.value }}</span>
+
+    <strong>Email:</strong> 
+    <span>{{ registerForm.controls.email.value }}</span>
+
+    <strong>Biography:</strong> 
+    <span>{{ registerForm.controls.biography.value }}</span>
+  </div>

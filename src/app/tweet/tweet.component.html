@@ -1,0 +1,45 @@
+
+
+<div class="tweetEntry-tweetHolder" style ="background-color: white">
+
+    <!---------------------------------------->
+    
+    <!-- Entry with Media turned on. -->
+    <div class="tweetEntry" (click) = clickDetected()>
+      
+      <div class="tweetEntry-content" >
+        
+        <a class="tweetEntry-account-group" href="[accountURL]">
+          
+          <img class="tweetEntry-avatar" src="http://placekitten.com/200/200">
+          
+          <strong class="tweetEntry-fullname">
+          id tweet: {{tweet.id}}
+          </strong>
+          
+          <span class="tweetEntry-username">
+            @<b> id Utente: {{tweet.idUtente}}</b>
+          </span>
+          
+          
+        </a>
+        
+        <div class="tweetEntry-text-container">
+          {{tweet.text}}
+        </div>
+        
+      </div>
+      
+      <div class="optionalMedia">
+        <img class="optionalMedia-img" src="http://placekitten.com/500/400">
+      </div>
+      
+      <div class="tweetEntry-action-list" style="line-height:24px;color: #b1bbc3;">
+        <i class="fa fa-reply" style="width: 80px;"></i>
+        <i class="fa fa-retweet" style="width: 80px"></i>
+        <i class="fa fa-heart" style="width: 80px"></i>
+      </div>
+      
+    </div>
+  
+</div>

@@ -1,0 +1,23 @@
+label {
+    display: block;
+    
+    input {
+        display: block;
+        width: 30%;
+        margin-bottom: 20px;
+        padding: 1em;
+    }
+}
+
+.cta {
+    background: #7700FF;
+    border: none;
+    color: white;
+
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+

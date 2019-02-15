@@ -1,0 +1,15 @@
+
+
+<ul *ngIf="tweetsList">
+
+    <li *ngFor ="let tweetItem of tweetsList" >
+      
+      <app-tweet [tweet] = "tweetItem" (eventChild)="clickDetectedFromChild($event)"></app-tweet>
+    </li>
+  
+    </ul>
+
+
+
+
+

@@ -1,0 +1,102 @@
+/*
+.example-selected-value {
+    margin: 15px 0;
+  }
+
+
+
+
+*/
+
+
+
+
+
+.navbar {
+  height: 46px;
+  padding: 5px 0 0 0;
+  border-bottom: 3px solid rgba(0,0,0,0.25);
+
+
+  /*
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+
+*/
+
+}
+
+#left-nav {
+  float: left;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#left-nav li {
+  /* float: right; */
+  display: inline-block;
+  padding-right: 15px;
+}
+
+#left-nav li a {
+  text-decoration: none;
+  color: #5D5D5D;
+}
+
+#left-nav li a:hover {
+  color: #98E2C4;
+  border-bottom: 2px solid #98E2C4;
+}
+
+#left-nav li a i {
+  height: 20px;
+}
+
+#left-nav li .badge {
+  margin-top: -15px;
+  background-color: #98E2C4;
+}
+
+#right-nav {
+  float: right;
+  padding-top: 5px;
+}
+
+#right-nav img {
+  height: 30px;
+  width: auto;
+  border-radius: 60px;
+  margin: 0 15px;
+}
+
+#twitter-icon {
+  float: left;  
+  margin: 10px 30px;
+  color: #1DA1F2 ; /*Twitter Blue */
+  font-size: 20px;
+}
+
+#right-nav input[type=search] {
+  border-radius: 24px;
+}
+
+#right-nav .btn {
+  border-radius: 24px;
+  background-color: #98E2C4;
+  color: #fff;
+}
+
+#right-nav .btn:hover {
+  background-color: #7AC9AA;
+}
+
+#right-nav i {
+  /* cursor: pointer; */
+  position: absolute;
+  /* display: block; */
+}

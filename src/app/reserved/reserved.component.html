@@ -1,0 +1,67 @@
+
+ <h3>Logins in NGXS - store</h3>
+ <ul>
+   <li *ngFor="let login of logins$ | async">
+  Username: {{ login.username }}, Password: {{login.password}}
+   </li>
+ </ul>
+
+  <br><br>
+  <div style="text-align: center">
+  <button (click) = 'openDialog()' style = "position: absolute; right: 20px; height:40px;width:90px">Tweet</button>
+  </div>
+
+<!--
+  <table class = "paleBlueRows" *ngIf="tweets">
+      <tbody>
+        <tr *ngFor ="let tweet of tweets"><td><h5>User: {{tweet.userId}}</h5><h3>{{tweet.text}}</h3></td></tr>
+    </tbody>
+    </table>
+
+
+<br><br><br>
+
+
+  -->
+
+    <div style ="background-color: #eff5ff">
+
+
+
+      <app-tweets-list [tweetsList] = "tweets" (eventGrandChild)="clickDetectedFromGrandChild($event)"></app-tweets-list>
+
+</div>
+
+      <br><br><br>
+
+      ----------------private zone: DA MODIFICARE------------------
+      <br><br><br>
+
+
+
+      <ul>
+          <li><button (click) = 'getTweets()'>Get all tweets</button></li>
+          <li><form [formGroup]='getForm' (ngSubmit)="getTweet()">
+              Id : <input type="text" formControlName="id">
+              <input type="submit" value="Get Tweet from Id" class="cta">
+        </form></li>
+        
+          <li><form [formGroup]='createForm' (ngSubmit)="createTweet()">
+            text : <input type="text" formControlName="text">
+            User id : <input type="text" formControlName="userId">
+            <input type="submit" value="Create new tweet" class="cta">
+        </form></li>
+        
+        <li><form [formGroup]='updateForm' (ngSubmit)="updateTweet()">
+          Id : <input type="text" formControlName="idToUpdate">
+          Text : <input type="text" formControlName="textToUpdate">
+          User id : <input type="text" formControlName="userIdToUpdate">
+          <input type="submit" value="Update Tweet from Id" class="cta">
+        
+          <li><form [formGroup]='deleteForm' (ngSubmit)="deleteTweet()">
+            Id : <input type="text" formControlName="idToDelete">
+            <input type="submit" value="Delete Tweet from Id" class="cta">
+        </form></li>
+        
+        </form></li>
+        </ul>

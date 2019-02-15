@@ -1,0 +1,23 @@
+
+
+<h1 style = "max-width: 1000px; margin: auto;">Login</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <h5 *ngIf="success">Your have been authenticated!</h5>
+
+    <label>
+      Username:
+      <input type="text" formControlName="username">
+    </label>
+  
+    <label>
+      Password:
+      <input type="text" formControlName="password">
+    </label>
+
+    <input type="submit" value="Log in" class="cta">
+  
+  </form>
+
+  
